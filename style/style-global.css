@@ -1,0 +1,146 @@
+:root {
+	--border-radius: .15in;
+	/* colors are being set in theme-light and theme-dark */
+}
+
+* {
+  box-sizing: border-box;
+  background-color: var(--color-page);
+}
+
+body, nav {
+ margin:5rem auto;
+ max-width:8in;
+ font:110%/1.5 system-ui;
+ padding: 0in .25in 0in .25in;
+ color: var(--color-text);
+ text-align: justify;
+}
+body li, ul {
+	text-align: left;
+}
+a {
+ color:unset;
+ text-decoration:none;
+ border-bottom:solid var(--color-accent);
+}
+blockquote {
+ border-left:solid var(--color-accent);
+ margin:0;
+ padding:0 1em;
+}
+sup {
+ font:icon;
+}
+h2 {
+	font-size:140%;
+	margin-top:3rem;
+}
+h1 {
+	font-size:180%;
+}
+capt {
+	font-size:75%;
+	font-style: italic;
+}
+
+img {
+	border-radius: var(--border-radius);
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	margin: .1in 0in .1in 0in;
+}
+
+/* CSS related to home button */
+#gotohome {
+	position: fixed;
+	bottom: 0px;
+	right: 10px;
+	background-color: transparent;
+}
+#gotohome a {
+	border-bottom: 0;
+	font-size: smaller;
+	color: white;
+	background-color: black;
+	padding: 2 4 2 4px;
+}
+
+/* CSS related to theme switcher */
+#css-switcher {
+	position: fixed;
+	top: 0px;
+	right: 10px;
+	background-color: transparent;
+}
+#css-switcher p {
+	padding: 2px;
+	display: inline-flex;
+	background-color: black;
+}
+#css-switcher a {
+	border-bottom: 0;
+	font-size: smaller;
+	padding: 0 10 0 10px;
+}
+#dark {
+	color: white;
+	background-color: black;
+}
+#light {
+	color: black;
+	background-color: white;
+}
+
+/* CSS related to the links.gerbenpasjes.com page */
+.links-button {
+	padding: 7 0 7 0px;
+}
+
+.links-button a {
+	display: block;
+	text-align: center;
+	border-radius: 5px;
+	border: var(--color-accent);
+	border-style: solid;
+	padding: 10px;
+	font-size: 120%;
+	font-weight: bolder;
+}
+
+.links-button a:hover {
+	font-style: italic;
+}
+
+@media screen and (max-width: 600px) {
+	.links-button {
+	padding: 3 0 3 0px;
+	}
+	.links-button a {
+		font-size: 80%;
+	}
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: .1in;
+  border-radius: var(--border-radius);
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
